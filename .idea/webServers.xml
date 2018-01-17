@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0e0397cf-71cb-49c5-a3da-97d0f608b1e4" name="laravelcrm" url="http://www.portakaltercume.net/">
+        <fileTransfer host="ftp.portakaltercume.net" port="21" rootFolder="/public_html/laravelcrm">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
