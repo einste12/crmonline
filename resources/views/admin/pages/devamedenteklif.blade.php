@@ -195,6 +195,7 @@
     $(document).ready(function() {
      
       $('#datatables').DataTable({
+          "order": [[ 2, "desc" ]],
           "ordering": true,
           "stateSave": false,  
           "pagingType": "full_numbers",

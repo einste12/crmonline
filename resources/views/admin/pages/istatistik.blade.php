@@ -120,7 +120,7 @@
             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div10'));
+            var chart = new google.charts.Bar(document.getElementById('gunleregoreteklif'));
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
@@ -135,147 +135,14 @@
 
 
 
-
-   <script type="text/javascript">
-
-       // Load the Visualization API and the corechart package.
-       google.charts.load('current', {'packages':['bar']});
-
-       // Set a callback to run when the Google Visualization API is loaded.
-       google.charts.setOnLoadCallback(drawChart);
-
-       // Callback that creates and populates a data table,
-       // instantiates the pie chart, passes in the data and
-       // draws it.
-       function drawChart() {
-
-           // Create the data table.
-           var data = new google.visualization.DataTable();
-           data.addColumn('string', '');
-           data.addColumn('number', 'Teklif Sayısı');
-           data.addRows([
-               ['OCAK', {{ $ocakcount }}],
-               ['ŞUBAT', {{ $subatcount  }}],
-               ['MART', {{$martcount}}],
-               ['NİSAN', {{ $nisancount  }}],
-                ['MAYIS', {{ $mayiscount    }}],
-                ['HAZİRAN', {{ $hazirancount  }}],
-                ['TEMMUZ', {{ $temmuzcount }}],
-                ['AĞUSTOS', {{ $agustoscount }}],
-                ['EYLÜL', {{ $eylulcount }}],
-                ['EKİM', {{ $ekimcount }}],
-                ['KASIM', {{ $kasimcount  }}],
-                ['ARALIK', {{ $aralikcount  }}]
-
-           ]);
-            var options={
-           chart: {
-               title: '',
-                   subtitle: '',
-           },
-
-               bars: 'vertical',
-               vAxis: {format: 'decimal'},
-               height: 400,
-               colors: ['#f80']
-              };
-
-           // Instantiate and draw our chart, passing in some options.
-           var chart = new google.charts.Bar(document.getElementById('chart_div'));
-           chart.draw(data, google.charts.Bar.convertOptions(options));
-       }
-   </script>
 
 
     {{-- TOPLAM ONAY BEKLEYEN AYLARA GÖRE --}}
 
-    <script type="text/javascript">
-
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['bar']});
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', '');
-            data.addColumn('number', 'Tamamlanan Teklifler');
-            data.addRows([
-                ['OCAK', {{ $ocakcountonay }}],
-                ['ŞUBAT', {{ $subatcountonay  }}],
-                ['MART', {{$martcountonay}}],
-                ['NİSAN', {{ $nisancountonay  }}],
-                ['MAYIS', {{ $mayiscountonay    }}],
-                ['HAZİRAN', {{ $hazirancountonay  }}],
-                ['TEMMUZ', {{ $temmuzcountonay }}],
-                ['AĞUSTOS', {{ $agustoscountonay }}],
-                ['EYLÜL', {{ $eylulcountonay }}],
-                ['EKİM', {{ $ekimcountonay }}],
-                ['KASIM', {{ $kasimcountonay  }}],
-                ['ARALIK', {{ $aralikcountonay  }}]
-
-            ]);
-            var options={
-                chart: {
-                    title: '',
-                    subtitle: '',
-                },
-
-                bars: 'vertical',
-                vAxis: {format: 'decimal'},
-                height: 400,
-                colors: ['#3366cc']
-            };
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div4'));
-            chart.draw(data, google.charts.Bar.convertOptions(options));
-        }
-    </script>
 
     {{-- İPTAL SEBEPLERİ --}}
 
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawVisualization);
 
-        function drawVisualization() {
-            // Some raw data (not necessarily accurate)
-            var data = google.visualization.arrayToDataTable([
-                ['Ay', 'Toplam', 'Onay Bekliyor', 'Devam Ediyor', 'Tamamlandı', 'İptal Edildi',],
-                ['Ocak',  389,      217,         41,             139,           37,],
-                ['Şubat',  289,      217,         41,             139,           37,],
-                ['Mart',  289,      217,         41,             139,           37,],
-                ['Nisan',  289,      117,         41,             139,           37,],
-                ['Mayıs',  489,      317,         41,             139,           37,],
-                ['Haziran',  189,      117,         41,             139,           37,],
-                ['Temmuz',  229,      157,         41,             139,           37,],
-                ['Ağustos',  229,      117,         41,             139,           37,],
-                ['Eylül',  189,      107,         41,             139,           37,],
-                ['Ekim',  329,      217,         41,             139,           37,],
-                ['Kasım',  199,      87,         41,             139,           37,],
-                ['Aralık',  389,      321,         41,             139,           37,],
-
-            ]);
-
-            var options = {
-                title : 'Tüm Teklifler',
-                vAxis: {title: ''},
-                hAxis: {title: ''},
-                seriesType: 'bars',
-                series: {5: {type: 'line'}}
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('chart_diva'));
-            chart.draw(data, options);
-        }
-    </script>
 
 
 
@@ -302,9 +169,9 @@
             data.addRows([
                 ['Yapılmayacak', {{ $yapilmayacak1 }}],
                 ['Fiyatı Yüksek Buldu', {{ $fiyatyuksek1  }}],
-                ['Başka Firmaya Yaptırdılar', {{$baskafirma1}}],
-                ['Geç Dönüş Yapıldığını Söyledi', {{ $gecdonus1}}],
-                ['Mükerrer Yükleme', {{ $mukerrer1    }}],
+                ['Başka Firmaya Ypt.', {{$baskafirma1}}],
+                ['Geç Dönüldü', {{ $gecdonus1}}],
+                ['Mükerrer Yükleme', {{ $mukerrer1  }}],
                 ['Tercuman', {{ $tercuman1  }}],
                 ['Mailden Teklif Verildi', {{ $maildenteklifverildi1}}],
                 ['Diğer', {{ $diger1 }}]
@@ -322,7 +189,7 @@
             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div5'));
+            var chart = new google.charts.Bar(document.getElementById('iptalsebepleri'));
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
@@ -347,10 +214,9 @@
             data.addColumn('number', 'Temsilci Raporları');
             data.addRows([
 
-
-                ['ŞULE', {{ $teklifsule1 }}],
-                ['GÜRKAN', {{$teklifgurkan1}}],
+                ['GÜRKAN BEY', {{$teklifgurkan1}}],
                 ['HANDAN', {{ $teklifhandan1  }}],
+                ['ŞULE', {{ $teklifsule1 }}],
                 ['AHMET', {{ $teklifahmet1    }}],
                 ['SÜMEYYE', {{ $teklifsumeyye1  }}],
                 ['YEŞİM', {{ $teklifyesim1 }}],
@@ -369,7 +235,7 @@
             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div6'));
+            var chart = new google.charts.Bar(document.getElementById('temsilcileriraporlari'));
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
@@ -409,76 +275,103 @@
             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div7'));
+            var chart = new google.charts.Bar(document.getElementById('musterineredengeldi'));
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
+
+
 
     <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawVisualization);
 
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['bar']});
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', '');
-            data.addColumn('number', 'İptal Edilenler');
-            data.addRows([
-                ['OCAK', {{ $ocakcountiptal }}],
-                ['ŞUBAT', {{ $subatcountiptal  }}],
-                ['MART', {{$martcountiptal}}],
-                ['NİSAN', {{ $nisancountiptal  }}],
-                ['MAYIS', {{ $mayiscountiptal    }}],
-                ['HAZİRAN', {{ $hazirancountiptal  }}],
-                ['TEMMUZ', {{ $temmuzcountiptal }}],
-                ['AĞUSTOS', {{ $agustoscountiptal }}],
-                ['EYLÜL', {{ $eylulcountiptal }}],
-                ['EKİM', {{ $ekimcountiptal }}],
-                ['KASIM', {{ $kasimcountiptal  }}],
-                ['ARALIK', {{ $aralikcountiptal  }}]
-
+        function drawVisualization() {
+            // Some raw data (not necessarily accurate)
+            var data = google.visualization.arrayToDataTable([
+                ['Ay',           'Toplam',                           'Tamamlandı',                        'İptal Edildi'],
+                ['Ocak',         {{$ocakcount}},                  {{$ocakcountonay}},                    {{$ocakcountiptal}}],
+                ['Şubat',        {{$subatcount}},                 {{$subatcountonay}},                    {{$subatcountiptal}}],
+                ['Mart',         {{$martcount}},                  {{$martcountonay}},                    {{$martcountiptal}}],
+                ['Nisan',        {{$nisancount}},                 {{$nisancountonay}},                    {{$nisancountiptal}}],
+                ['Mayıs',        {{$mayiscount}},                 {{$mayiscountonay}},                    {{$mayiscountiptal}}],
+                ['Haziran',      {{$hazirancount}},               {{$hazirancountonay}},                    {{$hazirancountiptal}}],
+                ['Temmuz',       {{$temmuzcount}},                {{$temmuzcountonay}},                    {{$temmuzcountiptal}}],
+                ['Ağustos',      {{$agustoscount}},               {{$agustoscountonay}},                    {{$agustoscountiptal}}],
+                ['Eylül',        {{$eylulcount}},                 {{$eylulcountonay}},                    {{$eylulcountiptal}}],
+                ['Ekim',         {{$ekimcount}},                  {{$ekimcountonay}},                    {{$ekimcountiptal}}],
+                ['Kasım',        {{$kasimcount}},                 {{$kasimcountonay}},                    {{$kasimcountiptal}}],
+                ['Aralık',       {{$aralikcount}},                {{$aralikcountonay}},                    {{$aralikcountiptal}}]
             ]);
-            var options={
-                chart: {
-                    title: '',
-                    subtitle: '',
-                },
 
-                bars: 'vertical',
-                vAxis: {format: 'decimal'},
-                height: 400,
-                colors: ['#dc3912']
+            var options = {
+                title : 'Tüm Teklifler',
+                vAxis: {title: ''},
+                hAxis: {title: ''},
+                seriesType: 'bars',
+                series: {5: {type: 'line'}}
             };
 
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.charts.Bar(document.getElementById('chart_div2'));
-            chart.draw(data, google.charts.Bar.convertOptions(options));
+            var chart = new google.visualization.ComboChart(document.getElementById('aylaragoreteklifler'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    {{--  ŞUBEYE GÖRE  --}}
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawVisualization);
+
+        function drawVisualization() {
+            // Some raw data (not necessarily accurate)
+            var data = google.visualization.arrayToDataTable([
+                ['Ay',           'Toplam'],
+                ['Ocak',         {{}}],
+                ['Şubat',        {{}}],
+                ['Mart',         {{}}],
+                ['Nisan',        {{}}],
+                ['Mayıs',        {{}}],
+                ['Haziran',      {{}}],
+                ['Temmuz',       {{}}],
+                ['Ağustos',      {{}}],
+                ['Eylül',        {{}}],
+                ['Ekim',         {{}}],
+                ['Kasım',        {{}}],
+                ['Aralık',       {{}}]
+            ]);
+
+            var options = {
+                title : 'SUBELERE GÖRE/DEMO',
+                vAxis: {title: ''},
+                hAxis: {title: ''},
+                seriesType: 'bars',
+                series: {5: {type: 'line'}}
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('subeleregore'));
+            chart.draw(data, options);
         }
     </script>
 
 
 
-    <div id="chart_diva" style="margin-bottom: 100px; height: 600px; width: auto !important;"></div>
 
 
-<div class="container">
-    <div id="chart_div" style="margin-bottom: 100px;"></div>
-    <div id="chart_div2" style="margin-bottom: 100px;"></div>
-    <div id="chart_div3" style="margin-bottom: 100px;"></div>
-    <div id="chart_div4" style="margin-bottom: 100px;"></div>
 
-   <div id="chart_div5" style="margin-bottom: 100px;"></div>
-   <div id="chart_div6" style="margin-bottom: 100px;"></div>
-   <div id="chart_div7" style="margin-bottom: 100px;"></div>
-    <div id="chart_div10" style="margin-bottom: 100px;"></div>
+
+
+    <div id="aylaragoreteklifler" style="margin-bottom: 100px; height: 500px;"></div>
+    <div class="container">
+        <div id="gunleregoreteklif" style="margin-bottom: 100px;"></div>
+
+   <div id="iptalsebepleri" style="margin-bottom: 100px;"></div>
+   <div id="temsilcileriraporlari" style="margin-bottom: 100px;"></div>
+   <div id="musterineredengeldi" style="margin-bottom: 100px;"></div>
+    <div id="subeleregore" style="margin-bottom: 100px; height:500px;"></div>
+
+
+
 
 
 </div>
@@ -516,61 +409,12 @@
     {{--</div>--}}
 
 
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawVisualization);
 
-        function drawVisualization() {
-            // Some raw data (not necessarily accurate)
-            var data = google.visualization.arrayToDataTable([
-                ['1', 'Toplam', 'Onay Bekliyor', 'Devam Ediyor', 'Tamamlandı', 'İptal Edildi',],
-                ['2',  389,      217,         41,             139,           37,],
-                ['3',  289,      217,         41,             139,           37,],
-                ['4',  289,      217,         41,             139,           37,],
-                ['5',  289,      117,         41,             139,           37,],
-                ['6',  489,      317,         41,             139,           37,],
-                ['7',  189,      117,         41,             139,           37,],
-                ['8',  229,      157,         41,             139,           37,],
-                ['9',  229,      117,         41,             139,           37,],
-                ['10',  189,      107,         41,             139,           37,],
-                ['11',  329,      217,         41,             139,           37,],
-                ['12',  199,      87,         41,             139,           37,],
-                ['13',  389,      321,         41,             139,           37,],
-                ['14',  389,      321,         41,             139,           37,],
-                ['15',  389,      321,         41,             139,           37,],
-                ['16',  389,      321,         41,             139,           37,],
-                ['17',  389,      321,         41,             139,           37,],
-                ['18',  389,      321,         41,             139,           37,],
-                ['19',  389,      321,         41,             139,           37,],
-                ['20',  389,      321,         41,             139,           37,],
-                ['21',  389,      321,         41,             139,           37,],
-                ['22',  389,      321,         41,             139,           37,],
-                ['23',  389,      321,         41,             139,           37,],
-                ['24',  389,      321,         41,             139,           37,],
-                ['25',  389,      321,         41,             139,           37,],
-                ['26',  389,      321,         41,             139,           37,],
-                ['27',  389,      321,         41,             139,           37,],
-                ['28',  389,      321,         41,             139,           37,],
-                ['29',  389,      321,         41,             139,           37,],
-                ['30',  389,      321,         41,             139,           37,],
-                ['31',  389,      321,         41,             139,           37,],
 
-            ]);
 
-            var options = {
-                title : 'Tüm Teklifler',
-                vAxis: {title: ''},
-                hAxis: {title: ''},
-                seriesType: 'bars',
-                series: {5: {type: 'line'}}
-            };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('chart_divs'));
-            chart.draw(data, options);
-        }
-    </script>
 
-    <div id="chart_divs" style="width: 100% !important; height: 500px;"></div>
+
 
 
 

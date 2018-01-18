@@ -18,7 +18,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/light-bootstrap-dashboard.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="{{ asset('css/prtkl.css') }}?ver=18" rel="stylesheet">
+    <link href="{{ asset('css/prtkl.css') }}?ver=21" rel="stylesheet">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
@@ -68,11 +68,10 @@
 
         <script src="{{ asset('js/moment.min.js') }}"></script>
         <script src="{{ asset('js/moment-with-locales.js') }}"></script>
-
         <script src="{{ asset('js/bootstrap-datetimepicker.js') }}"></script>
-        <script src="{{ asset('js/bootstrap-datetimepicker.tr.js') }}"></script>
-    <script src="{{ asset('js/bootstrap-selectpicker.js') }}"></script>
 
+
+    <script src="{{ asset('js/bootstrap-selectpicker.js') }}"></script>
 
     <script src="{{ asset('js/jquery.datatables.js') }}?ver=4"></script>
      <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
@@ -93,17 +92,18 @@
 
 
         <script type="text/javascript">
-            $('.datetimepicker').datetimepicker({
-                format: 'dd/mm/yyyy',
-                language: 'tr'
+            $(function () {
+                $('.datetimepicker').datetimepicker({
+                    locale: 'tr'
+                });
             });
-
         </script>
 
 
 
 
-     <script type="text/javascript">
+
+        <script type="text/javascript">
 
         $().ready(function(){
 

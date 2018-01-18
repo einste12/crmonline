@@ -1294,57 +1294,41 @@ public function  istatistik()
 
 
     //AYLAR COUNT
-    $ocak=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-01%')
-        ->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $ocak=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-01%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $ocakcount = count($ocak);
 
-
-
-
-
-    $subat=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $subat=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-02%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $subatcount = count($subat);
 
-    $mart=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $mart=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-03%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $martcount = count($mart);
 
-    $nisan=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $nisan=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-04%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $nisancount = count($nisan);
 
-    $mayis=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $mayis=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-05%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $mayiscount = count($mayis);
 
-    $haziran=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $haziran=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-06%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $hazirancount = count($haziran);
 
-    $temmuz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $temmuz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-07%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $temmuzcount = count($temmuz);
 
 
-    $agustos=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $agustos=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-08%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $agustoscount = count($agustos);
 
-    $eylul=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $eylul=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-09%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $eylulcount = count($eylul);
 
-    $ekim=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $ekim=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-10%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $ekimcount = count($ekim);
 
-    $kasim=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $kasim=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-11%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $kasimcount = count($kasim);
 
-    $aralik=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->whereNotIn('iptalNedeni', [5,6,99])->get();
+    $aralik=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-12%')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $aralikcount = count($aralik);
     //AYLAR COUNT BİTİŞ
 
@@ -1508,45 +1492,44 @@ public function  istatistik()
 
 
     //ŞULENİN VERDİĞİ TEKLİF SAYISI
-    $teklifsule=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>1])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifsule=Teklifler::where(['TeklifVerenTemsilci'=>1])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $teklifsule1 = count($teklifsule);
 
 
 
-    $teklifhandan=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>2])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifhandan=Teklifler::where(['TeklifVerenTemsilci'=>2])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [0])->get();
 
     $teklifhandan1 = count($teklifhandan);
 
 
-    $teklifgurkan=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>3])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
-
+    $teklifgurkan=Teklifler::where(['TeklifVerenTemsilci'=>3])
+        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
     $teklifgurkan1= count($teklifgurkan);
 
 
 
 
-    $teklifahmet=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>5])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifahmet=Teklifler::where(['TeklifVerenTemsilci'=>5])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $teklifahmet1= count($teklifahmet);
 
-    $teklifsumeyye=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>6])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifsumeyye=Teklifler::where(['TeklifVerenTemsilci'=>6])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $teklifsumeyye1= count($teklifsumeyye);
 
 
-    $teklifyesim=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>10])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifyesim=Teklifler::where(['TeklifVerenTemsilci'=>10])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $teklifyesim1= count($teklifyesim);
 
-    $teklifkubra=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1,'TeklifVerenTemsilci'=>11])
-        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->get();
+    $teklifkubra=Teklifler::where(['TeklifVerenTemsilci'=>11])
+        ->whereYear('TeklifVerilenTarih','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $teklifkubra1= count($teklifkubra);
 
@@ -1554,23 +1537,23 @@ public function  istatistik()
     //NEREDEN GELDİ TOPLAM
 
 
-    $internetgelen=Teklifler::where(['Silindi'=>0,'NeredenGeldi'=>1])
-        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->get();
+    $internetgelen=Teklifler::where(['NeredenGeldi'=>1])
+        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $internetgelen1= count($internetgelen);
 
-    $surekligelen=Teklifler::where(['Silindi'=>0,'NeredenGeldi'=>2])
-        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->get();
+    $surekligelen=Teklifler::where(['NeredenGeldi'=>2])
+        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $surekligelen1= count($surekligelen);
 
-    $referansgelen=Teklifler::where(['Silindi'=>0,'NeredenGeldi'=>3])
-        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->get();
+    $referansgelen=Teklifler::where(['NeredenGeldi'=>3])
+        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $referansgelen1= count($referansgelen);
 
-    $notergelen=Teklifler::where(['Silindi'=>0,'NeredenGeldi'=>4])
-        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->get();
+    $notergelen=Teklifler::where(['NeredenGeldi'=>4])
+        ->whereYear('GelenTeklifTarihi','>','2017-12-31')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $notergelen1= count($notergelen);
 
@@ -1630,185 +1613,154 @@ public function  istatistik()
     $month = $now->format('m');
 
 
-    $bir=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-01%')->get();
+    $bir=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-01%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $bircount = count($bir);
 
 
-    $iki=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-02%')->get();
+    $iki=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-02%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $ikicount = count($iki);
 
-    $uc=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-03%')->get();
+    $uc=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-03%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $uccount = count($uc);
 
-    $dort=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-04%')->get();
+    $dort=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-04%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $dortcount = count($dort);
 
 
 
-    $bes=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-05%')->get();
+    $bes=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-05%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $bescount = count($bes);
 
 
-    $alti=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-06%')->get();
+    $alti=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-06%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $alticount = count($alti);
 
 
-    $yedi=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-07%')->get();
+    $yedi=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-07%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yedicount = count($yedi);
 
 
-    $sekiz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-08%')->get();
+    $sekiz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-08%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $sekizcount = count($sekiz);
 
 
-    $dokuz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-09%')->get();
+    $dokuz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-09%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $dokuzcount = count($dokuz);
 
 
-    $on=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-10%')->get();
+    $on=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-10%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $oncount = count($on);
 
 
 
-    $onbir=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-11%')->get();
+    $onbir=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-11%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onbircount = count($onbir);
 
 
-    $oniki=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-12%')->get();
+    $oniki=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-12%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onikicount = count($oniki);
 
 
-    $onuc=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-13%')->get();
+    $onuc=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-13%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onuccount = count($onuc);
 
 
-    $ondort=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-14%')->get();
+    $ondort=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-14%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $ondortcount = count($ondort);
 
 
-    $onbes=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-15%')->get();
+    $onbes=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-15%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onbescount = count($onbes);
 
 
-    $onalti=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-16%')->get();
+    $onalti=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-16%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onalticount = count($onalti);
 
 
-    $onyedi=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-17%')->get();
+    $onyedi=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-17%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onyedicount = count($onyedi);
 
 
-    $onsekiz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-18%')->get();
+    $onsekiz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-18%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $onsekizcount = count($onsekiz);
 
 
-    $ondokuz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-19%')->get();
+    $ondokuz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-19%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $ondokuzcount = count($ondokuz);
 
 
-    $yirmi=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-20%')->get();
+    $yirmi=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-20%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmicount = count($yirmi);
 
 
-    $yirmibir=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-21%')->get();
+    $yirmibir=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-21%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmibircount = count($yirmibir);
 
 
-    $yirmiiki=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-22%')->get();
+    $yirmiiki=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-22%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmiikicount = count($yirmiiki);
 
 
 
-    $yirmiuc=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-23%')->get();
+    $yirmiuc=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-23%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmiuccount = count($yirmiuc);
 
 
-    $yirmidort=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-24%')->get();
+    $yirmidort=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-24%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmidortcount = count($yirmidort);
 
 
-    $yirmibes=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-25%')->get();
+    $yirmibes=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-25%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmibescount = count($yirmibes);
 
 
-    $yirmialti=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-26%')->get();
+    $yirmialti=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-26%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmialticount = count($yirmialti);
 
-    $yirmiyedi=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-27%')->get();
+    $yirmiyedi=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-27%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmiyedicount = count($yirmiyedi);
 
 
-    $yirmisekiz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-28%')->get();
+    $yirmisekiz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-28%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmisekizcount = count($yirmisekiz);
 
-    $yirmidokuz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-29%')->get();
+    $yirmidokuz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-29%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $yirmidokuzcount = count($yirmidokuz);
 
-    $otuz=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-30%')->get();
+    $otuz=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-30%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $otuzcount = count($otuz);
 
-    $otuzbir=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-30%')->get();
+    $otuzbir=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-30%')->whereNotIn('iptalNedeni', [5,6,99])->get();
 
     $otuzbircount = count($otuzbir);
 
@@ -1895,8 +1847,7 @@ public function test()
     $now =Carbon::now();
     $month = $now->format('m');
 
-    $bir=Teklifler::where(['Silindi'=>0])
-        ->where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-01%')->get();
+    $bir=Teklifler::where('GelenTeklifTarihi','LIKE','%2018-'.$month.'-01%')->get();
 
     $bircount = count($bir);
 

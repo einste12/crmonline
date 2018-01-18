@@ -249,10 +249,9 @@
                                       <div class="form-group">E-Mail: </strong><span id="mail"></span></div>
                                       <div class="form-group">Kaynak Dil: </strong><span id="kaynakdil"></span></div>
                                       <div class="form-group">Hedef Diller: </strong><span id="hedefdil"></span></div>
-                                      <div class="form-group">Tercuman: </strong><span id="tercuman"></span></div>
                                       <div class="form-group">Toplam Fiyat: </strong><span id="fiyat"></span></div>
-                                      
                                       <div class="form-group">Kaparo: </strong><span id="kaparo"></span></div>
+                                      <div class="form-group">Tercuman: </strong><span id="tercuman"></span></div>
                                       <div class="form-group">Noter Tasdiki: </strong><span id="tastiksekli"></span></div>
                                       {{-- <div class="form-group">Sube ID: </strong><span id="subeid"></span></div>
                                       <div class="form-group">Temsilci: </strong><span id="temsilcionizleme">{{ Auth::user()->name }}</span></div> --}}
@@ -269,6 +268,7 @@
 
 
               </div>
+
 
 
 
@@ -356,9 +356,6 @@ var inputBox6=document.getElementById('temsilcinot');
 
 
 </script>
-
-
-
 
 
 

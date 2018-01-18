@@ -57,7 +57,7 @@
      <thead>
        <tr>
            <th data-sortable="true">ID</th>
-           <th data-sortable="true">TARİH</th>
+           <th data-sortable="true">EKLENME TARİHİ</th>
            <th data-sortable="true">TERCUMAN İSİM SOYİSİM</th>
            <th data-sortable="true">PROJE ADI</th>
            <th data-sortable="true">ÇEVİRİ YAPTIĞI DİL</th>
@@ -100,6 +100,7 @@
     $(document).ready(function() {
 
         $('#datatables').DataTable({
+            "order": [[ 1, "desc" ]],
             "ordering": true,
             "stateSave": false,
             "pagingType": "full_numbers",
@@ -124,7 +125,6 @@
                 search: "_INPUT_",
                 searchPlaceholder: "Arama Yapınız",
             }
-
 
         });
         var table = $('#datatables').DataTable();

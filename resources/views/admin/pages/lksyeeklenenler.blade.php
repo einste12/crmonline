@@ -100,6 +100,7 @@
       $(document).ready(function() {
 
           $('#datatables').DataTable({
+              "order": [[ 1, "desc" ]],
               "ordering": true,
               "stateSave": false,
               "pagingType": "full_numbers",

@@ -263,7 +263,7 @@ $('#edit-modal12').on('show.bs.modal', function(e) {
         });
 
 
-        $("[name='TastikSekli']").change(function(){
+        $("[name='TasdikSekli']").change(function(){
             var e = document.getElementById("TastikSekli1");
             var strUser = e.options[e.selectedIndex].text;
 
@@ -479,8 +479,5 @@ $(document).ready(function(){
             }
         });
     });
-
-
-
 
 
