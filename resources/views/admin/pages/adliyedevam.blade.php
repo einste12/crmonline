@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    ADLİYE DEVAM EDENLER SAYFASI
+    Adliye Devam Eden İşler - Panel
 @endsection
 @section('content')
 

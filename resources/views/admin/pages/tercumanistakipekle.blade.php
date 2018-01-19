@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    TERCUMAN İŞ TAKİP EKLE
+    Tercüman iş Takip Ekle - Panel
 @endsection
 @section('content')
 

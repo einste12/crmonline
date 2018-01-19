@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
- ONAY BEKLEYEN TEKLİFLER
+ Onay Bekleyenler - Panel
  @endsection
 @section('content')
 

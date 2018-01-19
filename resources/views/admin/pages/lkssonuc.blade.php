@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    LKS ARAMA SONUÇLARI
+    Lks Arama Sonuçları - Panel
 @endsection
 @section('content')
 

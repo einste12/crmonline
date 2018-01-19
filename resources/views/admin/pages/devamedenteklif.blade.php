@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-   DEVAM EDEN TEKLİFLER
+   Devam Edenler - Panel
 @endsection
 @section('content')
 

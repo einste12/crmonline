@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-   TERCUMAN BAŞVURU SAYFASI
+   Tercüman Başvuruları - Panel
 @endsection
 @section('content')
 

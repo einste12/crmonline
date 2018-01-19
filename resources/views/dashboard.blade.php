@@ -1,4 +1,8 @@
 @extends('admin.master.master')
+@section('title')
+    Gelen Teklifler - Panel
+@endsection
+
 
 @section('content')
 

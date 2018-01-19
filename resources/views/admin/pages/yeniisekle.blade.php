@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-   YENİ İŞ EKLEME SAYFASI
+Yeni İş Ekle - Panel
 @endsection
 @section('content')
 

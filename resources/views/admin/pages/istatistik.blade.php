@@ -326,23 +326,23 @@
         function drawVisualization() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
-                ['Ay',           'Toplam'],
-                ['Ocak',         {{}}],
-                ['Şubat',        {{}}],
-                ['Mart',         {{}}],
-                ['Nisan',        {{}}],
-                ['Mayıs',        {{}}],
-                ['Haziran',      {{}}],
-                ['Temmuz',       {{}}],
-                ['Ağustos',      {{}}],
-                ['Eylül',        {{}}],
-                ['Ekim',         {{}}],
-                ['Kasım',        {{}}],
-                ['Aralık',       {{}}]
+                ['Ay',           'Merkez',                               'Kartal',                        'Maltepe' ,                        'Ataşehir',                      'Kadıköy'],
+                ['Ocak',          {{ $merkezocak1 }},                     {{$kartalocak1}},              {{$maltepeocak1}},                 {{$atasehirocak1}},              {{$kadikoyocak1}}],
+                ['Şubat',         {{ $merkezsubat1 }},                   {{$kartalsubat1}},              {{$maltepesubat1}},                {{$atasehirsubat1}},                {{$kadikoysubat1}}],
+                ['Mart',           {{$merkezmart1}},                     {{$kartalmart1}},               {{$maltepemart1}},                 {{$atasehirmart1}},                {{$kadikoymart1}}],
+                ['Nisan',          {{$merkeznisan1}},                    {{$kartalnisan1}},               {{$maltepenisan1}},               {{$atasehirnisan1}},                {{$kadikoynisan1}}],
+                ['Mayıs',          {{$merkezmayis1}},                     {{$kartalmayis1}},              {{$maltepemayis1}},               {{$atasehirmayis1}},                {{$kadikoymayis1}}],
+                ['Haziran',        {{$merkezhaziran1}},                     {{$kartalhaziran1}},          {{$maltepehaziran1}},             {{$atasehirhaziran1}},                 {{$kadikoyhaziran1}}],
+                ['Temmuz',        {{$merkeztemmuz1}},                    {{$kartaltemmuz1}},              {{$maltepetemmuz1}},              {{$atasehirtemmuz1}},                 {{$kadikoytemmuz1}}],
+                ['Ağustos',       {{$merkezagustos1}},                     {{$kartalagustos1}},           {{$maltepeagustos1}},             {{$atasehiragustos1}},                {{$kadikoyagustos1}}],
+                ['Eylül',          {{$merkezeylul1}},                    {{$kartaleylul1}},               {{$maltepeeylul1}},               {{$atasehireylul1}},                 {{$kadikoyeylul1}}],
+                ['Ekim',          {{$merkezekim1}},                    {{$kartalekim1}},                  {{$maltepeekim1}},                {{$atasehirekim1}},                {{$kadikoyekim1}}],
+                ['Kasım',         {{$merkezkasim1}},                     {{$kartalkasim1}},               {{$maltepekasim1}},               {{$atasehirkasim1}},                {{$kadikoykasim1}}],
+                ['Aralık',       {{$merkezaralik1}},                   {{ $kartalaralik1 }},              {{$maltepearalik1}},             {{$atasehiraralik1}},                 {{$kadikoyaralik1}}]
             ]);
 
             var options = {
-                title : 'SUBELERE GÖRE/DEMO',
+                title : 'Şubelere  Göre Toplam Teklifler',
                 vAxis: {title: ''},
                 hAxis: {title: ''},
                 seriesType: 'bars',
@@ -356,11 +356,6 @@
 
 
 
-
-
-
-
-
     <div id="aylaragoreteklifler" style="margin-bottom: 100px; height: 500px;"></div>
     <div class="container">
         <div id="gunleregoreteklif" style="margin-bottom: 100px;"></div>
@@ -368,14 +363,14 @@
    <div id="iptalsebepleri" style="margin-bottom: 100px;"></div>
    <div id="temsilcileriraporlari" style="margin-bottom: 100px;"></div>
    <div id="musterineredengeldi" style="margin-bottom: 100px;"></div>
-    <div id="subeleregore" style="margin-bottom: 100px; height:500px;"></div>
+
 
 
 
 
 
 </div>
-
+    <div id="subeleregore" style="margin-bottom: 100px; height:500px;"></div>
     {{--<div class="row" style="margin-top:50px;">--}}
 
         {{--<div class="col-md-2">--}}

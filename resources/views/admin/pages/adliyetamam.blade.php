@@ -1,7 +1,7 @@
 
 @extends('admin.master.master')
 @section('title')
-    ADLİYE TAMAMLANANLAR SAYFASI
+    Adliye Tamamlanan İşler - Panel
 @endsection
 @section('content')
 

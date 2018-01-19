@@ -1,7 +1,7 @@
 @extends('admin.master.master')
 
 @section('title')
-    TERCUMAN EKLEME SAYFASI
+    Yeni Tercüman Ekle - Panel
 @endsection
 @section('content')
 

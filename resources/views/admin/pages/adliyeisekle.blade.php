@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    ADLİYE KAYIT EKLEME SAYFASI
+    Adliye İş Ekle - Panel
 @endsection
 @section('content')
 

@@ -1765,6 +1765,274 @@ public function  istatistik()
     $otuzbircount = count($otuzbir);
 
 
+    //SUBELERE GÖRE TOPLAM TEKLİF
+
+    $merkezocak=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-01%')->get();
+    $merkezocak1 = count($merkezocak);
+
+     $merkezsubat=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->get();
+    $merkezsubat1 = count($merkezsubat);
+
+     $merkezmart=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->get();
+    $merkezmart1 = count($merkezmart);
+
+     $merkeznisan=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->get();
+    $merkeznisan1 = count($merkeznisan);
+
+     $merkezmayis=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->get();
+    $merkezmayis1 = count($merkezmayis);
+
+     $merkezhaziran=Teklifler::where(['Silindi'=>0, 'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->get();
+    $merkezhaziran1 = count($merkezhaziran);
+
+     $merkeztemmuz=Teklifler::where(['Silindi'=>0, 'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->get();
+    $merkeztemmuz1 = count($merkeztemmuz);
+
+     $merkezagustos=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->get();
+    $merkezagustos1 = count($merkezagustos);
+
+     $merkezeylul=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->get();
+    $merkezeylul1 = count($merkezeylul);
+
+     $merkezekim=Teklifler::where(['Silindi'=>0, 'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->get();
+    $merkezekim1 = count($merkezekim);
+
+     $merkezkasim=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->get();
+    $merkezkasim1 = count($merkezkasim);
+
+     $merkezaralik=Teklifler::where(['Silindi'=>0 ,'SubeID'=>1])
+        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->get();
+    $merkezaralik1 = count($merkezaralik);
+
+
+//KARTAL SUBE TOPLAM TEKLİFLERİ
+
+
+    $kartalocak=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-01%')->get();
+    $kartalocak1 = count($kartalocak);
+
+    $kartalsubat=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->get();
+    $kartalsubat1 = count($kartalsubat);
+
+    $kartalmart=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->get();
+    $kartalmart1 = count($kartalmart);
+
+    $kartalnisan=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->get();
+    $kartalnisan1 = count($kartalnisan);
+
+    $kartalmayis=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->get();
+    $kartalmayis1 = count($kartalmayis);
+
+    $kartalhaziran=Teklifler::where(['Silindi'=>0, 'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->get();
+    $kartalhaziran1 = count($kartalhaziran);
+
+    $kartaltemmuz=Teklifler::where(['Silindi'=>0, 'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->get();
+    $kartaltemmuz1 = count($kartaltemmuz);
+
+    $kartalagustos=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->get();
+    $kartalagustos1 = count($kartalagustos);
+
+    $kartaleylul=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->get();
+    $kartaleylul1 = count($kartaleylul);
+
+    $kartalekim=Teklifler::where(['Silindi'=>0, 'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->get();
+    $kartalekim1 = count($kartalekim);
+
+    $kartalkasim=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->get();
+    $kartalkasim1 = count($kartalkasim);
+
+    $kartalaralik=Teklifler::where(['Silindi'=>0 ,'SubeID'=>2])
+        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->get();
+    $kartalaralik1 = count($kartalaralik);
+
+
+//MALTEPE
+
+    $maltepeocak=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-01%')->get();
+    $maltepeocak1 = count($maltepeocak);
+
+    $maltepesubat=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->get();
+    $maltepesubat1 = count($maltepesubat);
+
+    $maltepemart=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->get();
+    $maltepemart1 = count($maltepemart);
+
+    $maltepenisan=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->get();
+    $maltepenisan1 = count($maltepenisan);
+
+    $maltepemayis=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->get();
+    $maltepemayis1 = count($maltepemayis);
+
+    $maltepehaziran=Teklifler::where(['Silindi'=>0, 'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->get();
+    $maltepehaziran1 = count($maltepehaziran);
+
+    $maltepetemmuz=Teklifler::where(['Silindi'=>0, 'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->get();
+    $maltepetemmuz1 = count($maltepetemmuz);
+
+    $maltepeagustos=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->get();
+    $maltepeagustos1 = count($maltepeagustos);
+
+    $maltepeeylul=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->get();
+    $maltepeeylul1 = count($maltepeeylul);
+
+    $maltepeekim=Teklifler::where(['Silindi'=>0, 'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->get();
+    $maltepeekim1 = count($maltepeekim);
+
+    $maltepekasim=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->get();
+    $maltepekasim1 = count($maltepekasim);
+
+    $maltepearalik=Teklifler::where(['Silindi'=>0 ,'SubeID'=>3])
+        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->get();
+    $maltepearalik1 = count($maltepearalik);
+
+
+    //ATASEHİR ŞUBESİ TEKLİFLER
+
+    $atasehirocak=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-01%')->get();
+    $atasehirocak1 = count($atasehirocak);
+
+    $atasehirsubat=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->get();
+    $atasehirsubat1 = count($atasehirsubat);
+
+    $atasehirmart=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->get();
+    $atasehirmart1 = count($atasehirmart);
+
+    $atasehirnisan=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->get();
+    $atasehirnisan1 = count($atasehirnisan);
+
+    $atasehirmayis=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->get();
+    $atasehirmayis1 = count($atasehirmayis);
+
+    $atasehirhaziran=Teklifler::where(['Silindi'=>0, 'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->get();
+    $atasehirhaziran1 = count($atasehirhaziran);
+
+    $atasehirtemmuz=Teklifler::where(['Silindi'=>0, 'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->get();
+    $atasehirtemmuz1 = count($atasehirtemmuz);
+
+    $atasehiragustos=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->get();
+    $atasehiragustos1 = count($atasehiragustos);
+
+    $atasehireylul=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->get();
+    $atasehireylul1 = count($atasehireylul);
+
+    $atasehirekim=Teklifler::where(['Silindi'=>0, 'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->get();
+    $atasehirekim1 = count($atasehirekim);
+
+    $atasehirkasim=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->get();
+    $atasehirkasim1 = count($atasehirkasim);
+
+    $atasehiraralik=Teklifler::where(['Silindi'=>0 ,'SubeID'=>4])
+        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->get();
+    $atasehiraralik1 = count($atasehiraralik);
+
+    //KADIKOY ŞUBELERİ
+
+    $kadikoyocak=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-01%')->get();
+    $kadikoyocak1 = count($kadikoyocak);
+
+    $kadikoysubat=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-02%')->get();
+    $kadikoysubat1 = count($kadikoysubat);
+
+    $kadikoymart=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-03%')->get();
+    $kadikoymart1 = count($kadikoymart);
+
+    $kadikoynisan=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-04%')->get();
+    $kadikoynisan1 = count($kadikoynisan);
+
+    $kadikoymayis=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-05%')->get();
+    $kadikoymayis1 = count($kadikoymayis);
+
+    $kadikoyhaziran=Teklifler::where(['Silindi'=>0, 'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-06%')->get();
+    $kadikoyhaziran1 = count($kadikoyhaziran);
+
+    $kadikoytemmuz=Teklifler::where(['Silindi'=>0, 'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-07%')->get();
+    $kadikoytemmuz1 = count($kadikoytemmuz);
+
+    $kadikoyagustos=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-08%')->get();
+    $kadikoyagustos1 = count($kadikoyagustos);
+
+    $kadikoyeylul=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-09%')->get();
+    $kadikoyeylul1 = count($kadikoyeylul);
+
+    $kadikoyekim=Teklifler::where(['Silindi'=>0, 'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-10%')->get();
+    $kadikoyekim1 = count($kadikoyekim);
+
+    $kadikoykasim=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-11%')->get();
+    $kadikoykasim1 = count($kadikoykasim);
+
+    $kadikoyaralik=Teklifler::where(['Silindi'=>0 ,'SubeID'=>5])
+        ->where('GelenTeklifTarihi','LIKE','%2018-12%')->get();
+    $kadikoyaralik1 = count($kadikoyaralik);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     return view('admin.pages.istatistik',compact('gelencount1','onaycount1','devamcount1', 'tamamlanancount1','iptalteklifcount1', 'ocakcount','subatcount','martcount',
@@ -1774,7 +2042,13 @@ public function  istatistik()
         'internetgelen1','surekligelen1','referansgelen1','notergelen1','ocakcountiptal','subatcountiptal','martcountiptal','nisancountiptal','mayiscountiptal','hazirancountiptal','temmuzcountiptal',
         'agustoscountiptal','eylulcountiptal','ekimcountiptal','kasimcountiptal','aralikcountiptal','bircount','ikicount','uccount','dortcount','bescount','alticount','yedicount','sekizcount',
         'dokuzcount','oncount','onbircount','onikicount','onuccount','ondortcount','onbescount','onalticount','onyedicount','onsekizcount','ondokuzcount','yirmicount','yirmibircount',
-        'yirmiikicount','yirmiuccount','yirmidortcount','yirmibescount','yirmialticount','yirmiyedicount','yirmisekizcount','yirmidokuzcount','otuzcount','otuzbircount'));
+        'yirmiikicount','yirmiuccount','yirmidortcount','yirmibescount','yirmialticount','yirmiyedicount','yirmisekizcount','yirmidokuzcount','otuzcount','otuzbircount','merkezocak1','merkezsubat1',
+        'merkezmart1','merkeznisan1','merkezmayis1','merkezhaziran1','merkeztemmuz1','merkezagustos1','merkezeylul1','merkezekim1','merkezkasim1','merkezaralik1','kartalocak1','kartalsubat1',
+        'kartalmart1','kartalnisan1','kartalmayis1','kartalhaziran1','kartaltemmuz1','kartalagustos1','kartaleylul1','kartalekim1','kartalkasim1','kartalaralik1','maltepeocak1','maltepesubat1',
+        'maltepemart1','maltepenisan1','maltepemayis1','maltepehaziran1','maltepetemmuz1','maltepeagustos1','maltepeeylul1','maltepeekim1','maltepekasim1','maltepearalik1','atasehirocak1',
+        'atasehirsubat1','atasehirmart1','atasehirnisan1','atasehirmayis1','atasehirhaziran1','atasehirtemmuz1','atasehiragustos1','atasehireylul1','atasehirekim1','atasehirkasim1','atasehiraralik1',
+        'kadikoyocak1','kadikoysubat1','kadikoymart1','kadikoynisan1','kadikoymayis1','kadikoyhaziran1','kadikoytemmuz1','kadikoyagustos1','kadikoyeylul1','kadikoyekim1','kadikoykasim1',
+        'kadikoyaralik1'));
 
 }
 

@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    TÜM TERCUMANLAR
+    Tüm Tercümanlar - Panel
 @endsection
 @section('content')
 

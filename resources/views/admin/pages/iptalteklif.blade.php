@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    İPTAL EDİLEN TEKLİFLER
+  İptal Edilen Teklifler - Panel
 @endsection
 @section('content')
 

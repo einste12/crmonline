@@ -1,9 +1,8 @@
 @extends('layouts.app')
 @section('title')
-    PORTAKAL MEDYA A.Ş GİRİŞ EKRANI
+  alsdşlaskdşlkasdşlkasşldkasşld
 @endsection
 @section('content')
-
 
 <div class="wrapper wrapper-full-page">
     <div class="full-page login-page" data-color="orange" data-image="../../assets/img/full-screen-image-1.jpg">
@@ -38,6 +37,7 @@
                                         <label>Şifreniz</label>
                                         <input type="password" placeholder="Şifreniz" class="form-control"name="password">
                                     </div>
+
                                 </div>
                                 <div class="footer text-center">
                                     <button type="submit" class="btn btn-fill btn-warning btn-wd">Giriş Yap</button>

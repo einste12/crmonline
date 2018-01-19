@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    TAMAMLANAN TEKLİFLER SAYFASI
+   Tamamlananlar - Panel
 @endsection
 @section('content')
 

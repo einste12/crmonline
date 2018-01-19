@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-   GERİ BİLDİRİM FORMU
+  Geri Bildirim Formu - Panel
 @endsection
 @section('content')
 

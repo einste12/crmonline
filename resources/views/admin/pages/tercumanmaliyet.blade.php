@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title')
-    TERCUMAN MALİYET TABLOSU
+   Tercüman Maliyet Tablosu - Panel
 @endsection
 @section('content')
 
