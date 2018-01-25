@@ -84,7 +84,7 @@
           </div>
 
 
-              <div class="col-md-12  form-group">
+              <div class="form-group">
          <label class="control-label" for="ProjeAdi">Alınan Ödeme</label>  
           <input required="true" id="AdSoyad" name="AlinanOdeme" type="number" placeholder="Esas Numarasını Giriniz" class="form-control input-md" required="">
         </div>
@@ -105,8 +105,8 @@
                     <input type="hidden" name="adliyedevamid" id="adliyedevamid" value=""/>
                </div>
                <div class="modal-footer">
-                   <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
-                   <button type="submit" class="btn btn-success">Onay Ver</button>
+                   <button type="button" class="btn btn-default btn-fill" data-dismiss="modal"><i class="fa fa-close"></i> Kapat</button>
+                   <button type="submit" class="btn btn-success btn-fill"><i class="fa fa-check"></i> Onay Ver</button>
                </div>
 
 </form>
@@ -151,8 +151,8 @@
                     <input type="hidden" name="adliyekayitsil" id="adliyekayitsil" value=""/>
                </div>
                <div class="modal-footer">
-                   <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-close"></i>Hayır</button>
-                   <button type="submit" class="btn btn-success"><i class="fa fa-check"></i>Evet</button>
+                   <button type="button" class="btn btn-default btn-fill" data-dismiss="modal"><i class="fa fa-close"></i>Kapat</button>
+                   <button type="submit" class="btn btn-success btn-fill"><i class="fa fa-check"></i>Evet</button>
                </div>
 
 </form>

@@ -130,13 +130,20 @@
                 </div>
             </li>
             @endif
+            @if(Auth::user()->role==99)
+                <li>
+                    <a href="{{ route('payments') }}">
+
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i><p>ONLİNE ÖDEME</p>
+                    </a>
+                </li>
+            @endif
             <li> 
                 <a href="{{ route('geribildirimformu') }}">
                     
                     <i class="fa fa-commenting-o" aria-hidden="true"></i><p>GERİ BİLDİRİM FORMU</p>
                 </a>
             </li>
-
 
 
 

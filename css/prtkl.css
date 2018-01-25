@@ -1,3 +1,22 @@
+ .modal {
+                       text-align: center;
+                       padding: 0!important;
+                   }
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
 /* BUGRA YAZAR */
 form {padding:20px;}
 .info {text-transform: uppercase !important;}
@@ -9,6 +28,11 @@ form {padding:20px;}
 .fa-envelope {color:#2196f3;}
 .fiyatverbox {    padding: 10px;border: solid 1px #e3e3e3;}
 @media (max-width:768px){
+    .modal-dialog {
+                           overflow-y: scroll !important;
+                           margin-bottom: 100%  !important;
+                           margin-top: 25%  !important;
+                       }
     input[type="checkbox"] { margin-left: 20px  !important;}
     div.dataTables_wrapper div.dataTables_filter input {width:100% !important;}
     #isgunu {padding: 0px !important;}

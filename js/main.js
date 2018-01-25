@@ -293,21 +293,52 @@ $('#edit-modal12').on('show.bs.modal', function(e) {
             if(secilen==2)
             {
 
-
-                document.getElementById("tasdiksiz").innerHTML = "Verilen fiyat noter yeminli tercüme hizmeti içindir.\n" +
+                document.getElementById("yeminli").innerHTML = "yeminli tercüme ücreti ";
+                document.getElementById("tasdiksiz").innerHTML = "Verilen fiyat yeminli tercüme hizmeti içindir.\n" +
                     "Noter tasdik ücreti ve Apostil hizmeti verilen fiyata dahil değildir.";
 
             }else{
                 document.getElementById("tasdiksiz").innerHTML = "";
+                document.getElementById("yeminli").innerHTML = "";
 
             }
 
+            if(secilen==1)
+            {
+
+
+                document.getElementById("tasdikli").innerHTML = "Apostil hizmeti verilen fiyata dahil değildir.";
+                document.getElementById("notertasdik").innerHTML = "Noter Tasdikli ücreti ";
+
+
+            }else{
+                document.getElementById("tasdikli").innerHTML = "";
+                document.getElementById("notertasdik").innerHTML = "";
+
+            }
+
+
+
+
+            if(secilen==3)
+
+            {
+                document.getElementById("apostiltasdik").innerHTML = "Verilen fiyata yeminli tercüme ücreti, noter tasdik ücreti ve kaymakanlıktan yapılacak olan apostil tasdiki dahildir.";
+                document.getElementById("ucret").innerHTML = "çeviri ücreti ";
+
+            }else{
+
+
+                document.getElementById("apostiltasdik").innerHTML = "";
+                document.getElementById("ucret").innerHTML = "";
+
+            }
+
+
+
+
         });
     });
-
-
-
-
 
 
 
@@ -360,7 +391,8 @@ $(document).ready(function(){
              $('.disa').prop('disabled', false);   
              $("#evraksiz").removeClass("hidden");
              $("#evrakli").addClass("hidden");
-             $("#tastiksekli").addClass("hidden");
+            $('#tastiksekli1').prop('required', false);
+            $("#tastiksekli").addClass("hidden");
              $("#teslimzamani1").addClass("hidden");
              $("#fiyat").addClass("hidden");
             $("#isgunu").addClass("hidden");

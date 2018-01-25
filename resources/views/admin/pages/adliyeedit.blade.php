@@ -23,7 +23,7 @@
     
   
         
-           <div class="row" >
+
               <div class="col-md-12">
             <div class="form-group">
             <label class=" control-label" for="tarih">Evrak Alma Tarihi <star>*</star></label>  
@@ -35,8 +35,8 @@
                 </div>
               </div>
               </div>
-          </div>
-          <div class="row" >
+
+
               <div class="col-md-12">
             <div class="form-group">
             <label class=" control-label" for="tarih">Evrak Teslim Tarihi <star>*</star></label>  
@@ -48,15 +48,15 @@
                 </div>
               </div>
               </div>
-          </div>
 
-  <div class="row">
-        <div class="col-md-6  form-group">
+
+
+        <div class="col-md-12  form-group">
          <label class="control-label" for="ProjeAdi">Mahkeme Numarası</label>  
              <input required="true" value="{{ $adliyedata->MahkemeNo }}" id="AdSoyad" name="MahkemeNo" type="number" placeholder="Mahkeme Numarasını Giriniz" class="form-control input-md" required="">
         </div>
 
-       <div class="col-md-6  form-group">
+       <div class="col-md-12  form-group">
             <label class="control-label" for="Karakter">Mahkeme Seçiniz</label>  
               <select name="MahkemeID" class="form-control">
                 @foreach($mahkemeler as $mahkemelers)
@@ -65,7 +65,7 @@
               </select>
        </div>
 
-</div>
+
 
 
           <div class="col-md-12  form-group">
@@ -73,8 +73,8 @@
           <input required="true" id="AdSoyad" value="{{$adliyedata->EsasNo}}" name="EsasNo" type="text" placeholder="Esas Numarasını Giriniz" class="form-control input-md" required="">
         </div>
 
-<div class="row">
-       <div class="col-md-6  form-group">
+
+       <div class="col-md-12  form-group">
          <label class="control-label" for="KaynakDil">Kaynak Dil</label>
                  <select name="KaynakDil" class="form-control">
                 @foreach($diller as $dillers)
@@ -83,7 +83,7 @@
               </select>
        </div>
 
-      <div class="col-md-6  form-group">
+      <div class="col-md-12  form-group">
          <label class="control-label" for="HedefDil">Hedef Dil  </label>
             <select name="HedefDil" class="form-control">
                 @foreach($diller as $dillers)
@@ -93,7 +93,7 @@
               
        </div>
 
-</div>
+
         <div class="col-md-12  form-group">
          <label class="control-label" for="ProjeAdi">Talep Edilen Fiyat</label>  
           <input required="true" value="{{ $adliyedata->TalepEdilenFiyat }}" id="AdSoyad" name="TalepEdilenFiyat" type="number" placeholder="Esas Numarasını Giriniz" class="form-control input-md" >
@@ -122,7 +122,7 @@
         
        </div>
 
-       <div class="col-md-12" style="">
+       <div class="col-md-12 form-group">
                <button type="submit" name="kayit" class="btn btn-warning btn-fill btn-wd">Kaydet</button>
        </div>
 

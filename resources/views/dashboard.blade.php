@@ -78,7 +78,7 @@
          </td>
          <td>{{ $teklifler->MusteriTalebi }}</td>
          <td>
-           <a title="Onayla" href="#myModal" data-toggle="modal" id="{{ $teklifler->id }}" data-target="#edit-modal6" class="fa fa-fw fa-2x fa-check-circle-o"> </a>
+           <a title="Teklif Ver" href="#myModal" data-toggle="modal" id="{{ $teklifler->id }}" data-target="#edit-modal6" class="fa fa-fw fa-2x fa-check-circle-o"> </a>
            <a title="Sil" href="#myModal" data-toggle="modal" id="{{ $teklifler->id }}" data-target="#edit-modal7" class="fa fa-fw fa-2x fa-trash-o"></a>
          </td>
        </tr>
@@ -152,11 +152,13 @@
 
               <div class="hidden form-group" id="tastiksekli">
                 <label>Evrak tipi</label>
-                <select name="tastiksekli" id="tastiksekli1" class="form-control" required>
+                <select name="tastiksekli" id="tastiksekli1" class="form-control" required="">
 
+                    <option value="" disabled="" selected>Tasdik Tipini Seçiniz</option>
+                    <option value="2">Yeminli Tercüme</option>
+                    <option value="1">Noter Tasdikli</option>
+                    <option value="3">Apostil Tasdikli</option>
 
-                    <option value="1" selected>Tasdikli</option>
-                    <option value="2">Tasdiksiz</option>
 
 
               </select>
@@ -205,11 +207,7 @@
 
 
 
-
-              <div class="hidden form-group fiyatverbox" id="evraksiz">
-
-
-
+               <div class="hidden form-group fiyatverbox" id="evraksiz">
 
 Sayın <span class="ilkisim"></span>,<br />
 Çevirisini yaptırmak istediğiniz dosyalarınızı bize maille gönderebilirseniz inceleyip size fiyat ve süre hakkında bilgi verebiliriz.<br /> <br />
@@ -238,8 +236,8 @@ www.portakaltercume.com.tr
 
 
 Sayın <span id="isimSoyisim"></span>,<br />
-Göndermiş olduğunuz belgenin yeminli tercüme ücreti​ <span style="color:red; font-weight:bold;" id="evraklifiyat"></span> <span style="color:red; font-weight:bold;" >TL</span> + %18 KDV’ dir.
-<div id="tasdiksiz"></div>
+Göndermiş olduğunuz belgenin <span id="ucret"> </span><span id="yeminli"></span><span id="notertasdik"></span><span style="color:red; font-weight:bold;" id="evraklifiyat"></span> <span style="color:red; font-weight:bold;" >TL</span> + %18 KDV’ dir.<span id="tasdikli"></span><span id="apostiltasdik"></span>
+<span id="tasdiksiz"></span>
 Ödemenin yapılması halinde belge/belgelerinizin tercümesi <span style="color:red; font-weight:bold;" id="isgosterme"></span> <span  class="gunText" style="color:red; display:none; font-weight:bold;">iş günü</span><span style="color:red; font-weight:bold;" id="saatgosterme" ></span> <span class="saatText" style="color:red;  display:none; font-weight:bold;">saat</span> içerisinde teslim edilecektir.<br />
 Değerlendirmenize sunar, iyi çalışmalar dileriz.<br /><br/>
 
@@ -307,8 +305,8 @@ www.portakaltercume.com.tr<br /><br />
                </div>
 
                <div class="modal-footer">
-                   <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
-                   <button type="submit" class="btn btn-success">Onayla</button>
+                   <button type="button" class="btn btn-default btn-fill" data-dismiss="modal"><i class="fa fa-close"></i> Hayır</button>
+                   <button type="submit" class="btn btn-success btn-fill"><i class="fa fa-check"></i> Onayla</button>
                </div>
 
 </form>

@@ -18,7 +18,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/light-bootstrap-dashboard.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="{{ asset('css/prtkl.css') }}?ver=21" rel="stylesheet">
+    <link href="{{ asset('css/prtkl.css') }}?ver=23" rel="stylesheet">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">

@@ -23,9 +23,8 @@
     
   
         
-           <div class="row" >
-              <div class="col-md-12">
-            <div class="form-group">
+
+            <div class="form-group col-md-12">
             <label class=" control-label" for="tarih">Evrak Alma Tarihi <star>*</star></label>  
             <div class='input-group date'>
             <input id="tarih" required="true" placeholder="Evrak Tarihi Giriniz" name='EvrakAlmaTarihi' type='text' class="datetimepicker form-control" />
@@ -34,8 +33,7 @@
                 </label>
                 </div>
               </div>
-              </div>
-          </div>
+
 
 
         <div class="col-md-12  form-group">
@@ -105,7 +103,7 @@
         
        </div>
 
-       <div class="col-md-12" style="">
+       <div class="col-md-12 form-group">
                <button type="submit" name="kayit" class="btn btn-warning btn-fill btn-wd">Kaydet</button>
        </div>
 

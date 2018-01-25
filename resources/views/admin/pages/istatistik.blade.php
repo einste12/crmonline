@@ -168,6 +168,8 @@
             data.addColumn('number', 'İptal Sebepleri');
             data.addRows([
                 ['Yapılmayacak', {{ $yapilmayacak1 }}],
+                ['Geç Dönüş Yaptığımızı Söyledi', {{ $gecdonus2 }}],
+                ['Ulaşılamadı', {{ $ulasilamadi }}],
                 ['Fiyatı Yüksek Buldu', {{ $fiyatyuksek1  }}],
                 ['Başka Firmaya Ypt.', {{$baskafirma1}}],
                 ['Geç Dönüldü', {{ $gecdonus1}}],
@@ -357,7 +359,9 @@
 
 
     <div id="aylaragoreteklifler" style="margin-bottom: 100px; height: 500px;"></div>
-    <div class="container">
+
+        <div id="subeleregore" style="margin-bottom: 100px; height:500px;"></div>
+        <div class="container">
         <div id="gunleregoreteklif" style="margin-bottom: 100px;"></div>
 
    <div id="iptalsebepleri" style="margin-bottom: 100px;"></div>
@@ -370,7 +374,7 @@
 
 
 </div>
-    <div id="subeleregore" style="margin-bottom: 100px; height:500px;"></div>
+
     {{--<div class="row" style="margin-top:50px;">--}}
 
         {{--<div class="col-md-2">--}}

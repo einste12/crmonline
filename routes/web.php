@@ -174,6 +174,7 @@ Route::get('test', 'DashBoardController@test')->name('test');
 Route::get('mailgonder', 'DashBoardController@mail')->name('mail');
 Route::post('toplugelenteklifsil', 'DashBoardController@toplugelenteklifsil')->name('toplugelenteklifsil');
 
+Route::get('payments', 'DashBoardController@payments')->name('payments');
 
 
 

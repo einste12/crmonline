@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         $temsilci = Temsilciler::orderBy('id', 'ASC')->get();
         view()->share('temsilci',$temsilci);
 
-        $iptalsebepleri =IptalNedenleri::all();
+        $iptalsebepleri =IptalNedenleri::whereNotIn('id',[1,8,4,99])->orderBy('sirala','asc')->get();
         view()->share('iptalnedeni',$iptalsebepleri);
 
 

@@ -86,7 +86,6 @@
            <a  title="Giden Mail" class="fa fa-fw fa-2x fa-envelope-o" href="{{ route('devamgidenmail',['id'=>$teklifler->id]) }}" > </a>
            <a  title="Sil"class="fa fa-fw fa-2x fa-trash-o" href="#myModal" data-toggle="modal" id="{{ $teklifler->id }}" data-target="#edit-modal9"></a>
          </td>
-
        </tr>
        @endforeach
      </tbody>

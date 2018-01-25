@@ -21,6 +21,8 @@ use Alert;
 use DateTime;
 use Mail;
 
+use App\payment;
+
 class DashBoardController extends Controller
 {
     /**
@@ -1453,7 +1455,22 @@ public function  istatistik()
     $fiyatyuksek=Teklifler::where(['Silindi'=>1,'OnayDurumu'=>0,'iptalNedeni'=>2])
         ->where('iptalTarihi','>','2017-12-31')->get();
 
-    $fiyatyuksek1 = count($fiyatyuksek);
+       $fiyatyuksek1=count($fiyatyuksek);
+
+    $gecdonus2=Teklifler::where(['Silindi'=>1,'OnayDurumu'=>0,'iptalNedeni'=>9])
+        ->where('iptalTarihi','>','2017-12-31')->get();
+
+
+    $gecdonus2 = count($gecdonus2);
+
+
+    $ulasilamadi=Teklifler::where(['Silindi'=>1,'OnayDurumu'=>0,'iptalNedeni'=>9])
+        ->where('iptalTarihi','>','2017-12-31')->get();
+
+
+    $ulasilamadi = count($ulasilamadi);
+
+
 
     $baskafirma=Teklifler::where(['Silindi'=>1,'OnayDurumu'=>0,'iptalNedeni'=>3])
     ->where('iptalTarihi','>','2017-12-31')->get();
@@ -2048,7 +2065,7 @@ public function  istatistik()
         'maltepemart1','maltepenisan1','maltepemayis1','maltepehaziran1','maltepetemmuz1','maltepeagustos1','maltepeeylul1','maltepeekim1','maltepekasim1','maltepearalik1','atasehirocak1',
         'atasehirsubat1','atasehirmart1','atasehirnisan1','atasehirmayis1','atasehirhaziran1','atasehirtemmuz1','atasehiragustos1','atasehireylul1','atasehirekim1','atasehirkasim1','atasehiraralik1',
         'kadikoyocak1','kadikoysubat1','kadikoymart1','kadikoynisan1','kadikoymayis1','kadikoyhaziran1','kadikoytemmuz1','kadikoyagustos1','kadikoyeylul1','kadikoyekim1','kadikoykasim1',
-        'kadikoyaralik1'));
+        'kadikoyaralik1','gecdonus2','ulasilamadi'));
 
 }
 
@@ -2097,6 +2114,21 @@ public function  taslaklar()
 
 
     }
+
+
+
+    public  function payments()
+
+    {
+
+
+        $data = payment::all();
+        return view('admin.pages.payment',['data'=>$data]);
+
+    }
+
+
+
 
 
 
