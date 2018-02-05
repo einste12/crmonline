@@ -69,7 +69,7 @@
                       $dosyaurl = $url.'tamamlananlar'.'/'.$dosya->oftid.'/'.$dosya->orjisim;
 
                   @endphp
-                  <a target="_blank" href="{{ $dosyaurl }}">{{ $dosya->orjisim.''.$dosya->uzanti  }}</a>@endforeach
+                  <a target="_blank" href="{{ $dosyaurl.'.'.$dosya->uzanti }}">{{ $dosya->orjisim.''.$dosya->uzanti  }}</a>@endforeach
 
 
           </td>

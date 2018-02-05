@@ -71,7 +71,7 @@ class AppServiceProvider extends ServiceProvider
 
 
         $onaybekleyen=Teklifler::where(['Silindi'=>0,'OnayDurumu'=>1])
-            ->where('TeklifVerilenTarih','>',Carbon::now()->subDays(60))->get();
+            ->where('TeklifVerilenTarih','>','2017-12-31')->get();
 
 
 

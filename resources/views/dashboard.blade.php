@@ -73,7 +73,7 @@
 
           @endphp
 
-                 <a target="_blank" href="{{ $dosyaurl }}">{{ $dosya->orjisim.''.$dosya->uzanti  }}  </a> <br/>
+                 <a target="_blank" href="{{ $dosyaurl.'.'.$dosya->uzanti }}">{{ $dosya->orjisim.'.'.$dosya->uzanti  }}  </a> <br/>
            @endforeach
          </td>
          <td>{{ $teklifler->MusteriTalebi }}</td>

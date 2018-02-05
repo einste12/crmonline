@@ -64,7 +64,7 @@
                $dosyaurl = $url.'onaybekleyenler'.'/'.$dosya->oftid.'/'.$dosya->orjisim;
           
           @endphp          
-             <a target="_blank" href="{{ $dosyaurl }}">{{ $dosya->orjisim.''.$dosya->uzanti  }}</a><br/>
+             <a target="_blank" href="{{ $dosyaurl.'.'.$dosya->uzanti }}">{{ $dosya->orjisim.''.$dosya->uzanti  }}</a><br/>
            @endforeach
          <td class="col-md-1">
         Fiyat: {{ (!empty($teklifler->Fiyat))? $teklifler->Fiyat : '0'}}TL</br>

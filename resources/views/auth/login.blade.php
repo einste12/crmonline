@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title')
-  alsdşlaskdşlkasdşlkasşldkasşld
+@section('title2')
+Portakal A.Ş Giriş Sistemi
 @endsection
 @section('content')
 

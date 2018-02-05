@@ -167,16 +167,13 @@
             data.addColumn('string', '');
             data.addColumn('number', 'İptal Sebepleri');
             data.addRows([
-                ['Yapılmayacak', {{ $yapilmayacak1 }}],
-                ['Geç Dönüş Yaptığımızı Söyledi', {{ $gecdonus2 }}],
-                ['Ulaşılamadı', {{ $ulasilamadi }}],
-                ['Fiyatı Yüksek Buldu', {{ $fiyatyuksek1  }}],
-                ['Başka Firmaya Ypt.', {{$baskafirma1}}],
-                ['Geç Dönüldü', {{ $gecdonus1}}],
-                ['Mükerrer Yükleme', {{ $mukerrer1  }}],
-                ['Tercuman', {{ $tercuman1  }}],
                 ['Mailden Teklif Verildi', {{ $maildenteklifverildi1}}],
-                ['Diğer', {{ $diger1 }}]
+                ['Mükerrer Yükleme', {{ $mukerrer1  }}],
+                ['Tercuman Başvurusu', {{ $tercuman1  }}],
+                ['Fiyatı Yüksek Buldu (ARANDI)', {{ $fiyatyuksek1  }}],
+                ['Başka Firmaya Ypt.', {{$baskafirma1}}],
+                ['Dönüş Yapacağını Söyledi', {{ $gecdonus2 }}],
+                ['Ulaşılamadı', {{ $ulasilamadi }}]
             ]);
             var options={
                 chart: {
